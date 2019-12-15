@@ -21,7 +21,7 @@ export default {
         this.currentImage === this.images.length - 1
           ? 0
           : this.currentImage + 1;
-      this.currentStyle = { animation: `come ${this.speed}s ease 0s 1` };
+      this.currentStyle = { animation: `come ${this.speed + 0.2}s ease 0s 1` };
     },
     changeImageRepeated() {
       this.currentStyle = {
@@ -29,9 +29,6 @@ export default {
         transform: "translateY(-100%);"
       };
       window.setTimeout(this.changeImage, this.speed * 1000);
-      window.setTimeout(() => {
-        this.currentStyle = { animation: `come ${this.speed}s ease 0s 1` };
-      }, this.speed * 1000 + 500);
       window.setTimeout(
         this.changeImageRepeated,
         this.speed * 2000 + this.delay * 1000
@@ -60,7 +57,7 @@ $img-sz: 175px;
 
 @keyframes come {
   0% {
-    transform: translateY($img-sz);
+    transform: translateY($img-sz + 10px);
   }
   100% {
     transform: translateY(0%);
