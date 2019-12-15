@@ -29,6 +29,9 @@ export default {
         transform: "translateY(-100%);"
       };
       window.setTimeout(this.changeImage, this.speed * 1000);
+      window.setTimeout(() => {
+        this.currentStyle = { animation: `come ${this.speed}s ease 0s 1` };
+      }, this.speed * 1000 + 500);
       window.setTimeout(
         this.changeImageRepeated,
         this.speed * 2000 + this.delay * 1000
