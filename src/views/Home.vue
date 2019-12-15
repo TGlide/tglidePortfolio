@@ -58,7 +58,10 @@
                 :images="[
                   require('@/assets/icons/vue.png'),
                   require('@/assets/icons/bulma.png'),
-                  require('@/assets/icons/python.png')
+                  require('@/assets/icons/python.png'),
+                  require('@/assets/icons/flutter.png'),
+                  require('@/assets/icons/node.png'),
+                  require('@/assets/icons/heroku.png')
                 ]"
                 :speed="0.75"
                 :delay="2"
@@ -98,6 +101,8 @@
         </div>
       </div>
     </section>
+
+    <Divider />
   </div>
 </template>
 
@@ -127,7 +132,7 @@ body {
     transform: translateY(0%);
   }
   50% {
-    transform: translateY(2.5%);
+    transform: translateY(5%);
   }
   100% {
     transform: translateY(0%);

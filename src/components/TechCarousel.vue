@@ -44,19 +44,20 @@ export default {
 </script>
 
 <style lang="scss">
+$img-sz: 175px;
 // Animations
 @keyframes goAway {
   0% {
     transform: translateY(0%);
   }
   100% {
-    transform: translateY(-100%);
+    transform: translateY(-$img-sz);
   }
 }
 
 @keyframes come {
   0% {
-    transform: translateY(100%);
+    transform: translateY($img-sz);
   }
   100% {
     transform: translateY(0%);
@@ -64,15 +65,16 @@ export default {
 }
 
 .tech-carousel {
-  $img-sz: 200px;
   overflow: hidden;
   .container {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: $img-sz;
     height: $img-sz;
   }
   img {
-    margin: 0 auto;
+    margin: auto auto;
     display: block;
     max-width: $img-sz;
     max-height: $img-sz;
