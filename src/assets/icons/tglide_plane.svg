@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="105.15495mm"
+   height="143.26077mm"
+   viewBox="0 0 105.15495 143.26077"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.5"
-     inkscape:cx="751.84636"
-     inkscape:cy="618.08129"
+     inkscape:cx="223.86394"
+     inkscape:cy="372.08132"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -52,7 +52,8 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-53.705765,-88.651736)">
     <path
        style="fill:#222f3e;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 89.836883,183.99844 111.13067,160.42527 93.918512,150.32248 85.312434,164.9154 Z"
@@ -76,13 +77,13 @@
        id="path4527"
        inkscape:connector-curvature="0" />
     <circle
-       style="fill:#54a0ff;fill-opacity:0.45959595;fill-rule:evenodd;stroke:none;stroke-width:0.37149113;stroke-opacity:1"
+       style="fill:#54a0ff;fill-opacity:0.45959598;fill-rule:evenodd;stroke:none;stroke-width:0.37149113;stroke-opacity:1"
        id="path6788"
        cx="61.58749"
        cy="216.97467"
        r="3.6775749" />
     <circle
-       style="fill:#54a0ff;fill-opacity:0.75252527;fill-rule:evenodd;stroke:none;stroke-width:0.4630208;stroke-opacity:1"
+       style="fill:#54a0ff;fill-opacity:0.7525253;fill-rule:evenodd;stroke:none;stroke-width:0.4630208;stroke-opacity:1"
        id="path6790"
        cx="77.799065"
        cy="207.46202"

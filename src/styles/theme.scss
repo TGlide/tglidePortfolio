@@ -33,3 +33,26 @@ $colors: ("white": ($white,
 $link: $primary;
 $link-invert: $primary-invert;
 $link-focus-border: $primary;
+
+// Card
+$card-shadow: none;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+// Icons
+$icon-dimensions-large: 9rem;
+$start: 1;
+$end: 10;
+
+@for $i from $start through $end {
+  .fa-#{$i}x {
+    width: #{$i}rem !important;
+    height: #{$i}rem !important;
+  }
+}
+
+
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";

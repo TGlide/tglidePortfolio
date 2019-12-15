@@ -5,14 +5,22 @@ import router from "./router";
 
 // Font Awesome
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
-library.add(faCheck);
+import {
+  faCheck,
+  faLeaf,
+  faLaptopCode,
+  faPlus,
+  faHeart,
+  faEquals
+} from "@fortawesome/free-solid-svg-icons";
+library.add(faCheck, faLeaf, faLaptopCode, faPlus, faHeart, faEquals);
+
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 Vue.component("faIcon", FontAwesomeIcon);
 
 // Buefy
 import Buefy from "buefy";
-import "buefy/dist/buefy.css";
+
 Vue.use(Buefy, {
   defaultIconComponent: "faIcon",
   defaultIconPack: "fas"
