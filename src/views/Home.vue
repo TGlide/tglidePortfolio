@@ -10,15 +10,30 @@
                 <img src="@/assets/icons/tglide_plane.svg" alt="" srcset="" />
               </figure>
             </div>
+            <!-- Initial description -->
             <div class="column is-8 profile-desc">
-              <p class="title">
+              <!-- pt-BR -->
+              <p class="title" v-if="lang == 'pt-BR'">
+                <span class="initial">Oi!</span> Eu sou o Thomas.
+                <br />
+                Sou um desenvolvedor
+                <underline color="yellow" :anim="true">full-stack</underline>
+                com interesse em
+                <underline :anim="true" color="blue">design</underline>,
+                <underline :anim="true" color="green">dados</underline>,
+                <underline :anim="true" color="red">sites e apps</underline>, e
+                mais!
+              </p>
+
+              <!-- en -->
+              <p class="title" v-if="lang == 'en'">
                 <span class="initial">Hi!</span> I'm Thomas.
                 <br />
                 I'm a
                 <underline color="yellow" :anim="true">full-stack</underline>
-                developer, with a great interest in
-                <underline :anim="true" color="green">data</underline>,
-                <underline :anim="true" color="blue">design</underline>, and
+                developer, with an interest in
+                <underline :anim="true" color="blue">design</underline>,
+                <underline :anim="true" color="green">data</underline>, and
                 <underline :anim="true" color="red">open-source</underline>
                 projects.
               </p>
@@ -28,6 +43,7 @@
       </div>
     </section>
 
+    <!-- Divider -->
     <h1 class="has-text-centered has-text-grey-light title">...</h1>
 
     <!-- About -->
@@ -36,11 +52,21 @@
         <div class="columns is-centered">
           <div class="column is-3">
             <div class="header-card has-text-right has-text-success">
-              About
+              <span v-if="lang == 'en'">About</span>
+              <span v-if="lang == 'pt-BR'">Sobre</span>
             </div>
           </div>
+
           <div class="column is-9">
-            <p class="description has-text-centered">
+            <!-- pt-BR -->
+            <p class="description has-text-centered" v-if="lang == 'pt-BR'">
+              Eu projeto soluções com tecnologia para auxiliar o
+              <span class="has-text-success"
+                >dia-a-dia <span class="icon"><faIcon icon="leaf"/></span
+              ></span>
+            </p>
+            <!-- en -->
+            <p class="description has-text-centered" v-if="lang == 'en'">
               I create solutions with technology to improve everyday
               <span class="has-text-success"
                 >life <span class="icon"><faIcon icon="leaf"/></span
@@ -78,19 +104,36 @@
       </div>
     </section>
 
+    <!-- What I do -->
+    <section class="section" id="what-i-do">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-9"></div>
+
+          <div class="column is-3">
+            <div class="header-card has-text-left has-text-amour">
+              <span v-if="lang == 'en'">What I do</span>
+              <span v-if="lang == 'pt-BR'">O que faço</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Worked with -->
     <section class="section" id="worked-with">
       <div class="container">
         <div class="columns is-centered">
+          <div class="column is-3">
+            <div class="header-card has-text-info has-text-right">
+              <span v-if="lang == 'en'">Worked with</span>
+              <span v-if="lang == 'pt-BR'">Clientes e Trabalho</span>
+            </div>
+          </div>
           <div class="column is-9 companies">
             <figure class="image">
               <img src="@/assets/companies/stone.png" alt="" />
             </figure>
-          </div>
-          <div class="column is-3">
-            <div class="header-card has-text-info has-text-left">
-              Worked with
-            </div>
           </div>
         </div>
       </div>
@@ -111,7 +154,9 @@ export default {
   components: { Divider, TechCarousel, underline },
   data() {
     return {
-      loaded: false
+      loaded: false,
+      lang: "pt-BR"
+      // lang: "en"
     };
   },
   mounted() {
@@ -144,17 +189,19 @@ body {
 
 // Components
 .header-card {
-  padding: 4rem 2rem;
+  padding: 4rem 0rem;
 
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 600;
   font-family: "Josefin Sans", sans-serif;
 
   &.has-text-left {
     border-left: 2px rgba($grey-light, 0.5) solid;
+    padding-left: 2rem;
   }
   &.has-text-right {
     border-right: 2px rgba($grey-light, 0.5) solid;
+    padding-right: 2rem;
   }
 }
 
