@@ -11,9 +11,30 @@ import {
   faLaptopCode,
   faPlus,
   faHeart,
-  faEquals
+  faEquals,
+  faDesktop,
+  faMobile,
+  faMobileAlt,
+  faMagic,
+  faCog,
+  faCoffee,
+  faIceCream
 } from "@fortawesome/free-solid-svg-icons";
-library.add(faCheck, faLeaf, faLaptopCode, faPlus, faHeart, faEquals);
+library.add(
+  faCheck,
+  faLeaf,
+  faLaptopCode,
+  faPlus,
+  faHeart,
+  faEquals,
+  faDesktop,
+  faMobile,
+  faMobileAlt,
+  faMagic,
+  faCog,
+  faCoffee,
+  faIceCream
+);
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 Vue.component("faIcon", FontAwesomeIcon);

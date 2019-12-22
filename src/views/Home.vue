@@ -108,7 +108,42 @@
     <section class="section" id="what-i-do">
       <div class="container">
         <div class="columns is-centered">
-          <div class="column is-9"></div>
+          <!-- Items grid -->
+          <div class="column is-9">
+            <div class="columns is-centered items">
+              <div class="column is-one-third">
+                <div class="item">
+                  <span><faIcon icon="desktop"/></span>
+                  <span>Sites</span>
+                </div>
+                <div class="item">
+                  <span><faIcon icon="mobile-alt"/></span>
+                  <span>Apps</span>
+                </div>
+              </div>
+
+              <div class="column is-one-third">
+                <div class="item">
+                  <span><faIcon icon="magic"/></span>
+                  <span>Mágica</span>
+                </div>
+                <div class="item">
+                  <span><faIcon icon="cog"/></span>
+                  <span>Automação</span>
+                </div>
+              </div>
+              <div class="column is-one-third">
+                <div class="item">
+                  <span><faIcon icon="laptop-code"/></span>
+                  <span>Programas</span>
+                </div>
+                <div class="item">
+                  <span><faIcon icon="ice-cream"/></span>
+                  <span>Como doce</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div class="column is-3">
             <div class="header-card has-text-left has-text-amour">
@@ -253,6 +288,43 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: 1rem;
+  }
+}
+
+#what-i-do {
+  .items {
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    .column {
+      height: 100%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      .item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        :nth-child(1) {
+          width: 2.65rem;
+          height: 2.65rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        :nth-child(2) {
+          font-size: 1.5rem;
+          font-family: "Montserrat", sans-serif;
+        }
+      }
+    }
   }
 }
 
