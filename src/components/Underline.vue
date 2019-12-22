@@ -69,21 +69,31 @@ $bg-height: 5%;
 
   // Color helpers
   $clr-op: 0.75;
-  &.yellow {
-    $color: rgba($warning, $clr-op);
-    background-image: linear-gradient(to right, $color, $color);
-  }
-  &.green {
-    $color: rgba($success, $clr-op);
-    background-image: linear-gradient(to right, $color, $color);
-  }
-  &.red {
-    $color: rgba($danger, $clr-op);
-    background-image: linear-gradient(to right, $color, $color);
-  }
-  &.blue {
-    $color: rgba($info, $clr-op);
-    background-image: linear-gradient(to right, $color, $color);
+  $clr-selec: (
+    "yellow": $warning,
+    "green": $success,
+    "blue": $info,
+    "red": $danger
+  );
+
+  @each $name, $value in $clr-selec {
+    &.#{$name} {
+      $color: rgba($value, $clr-op);
+      background-image: linear-gradient(to right, $color, $color);
+
+      // Override selection color
+      &::selection {
+        background: $color;
+        color: white;
+        /* WebKit/Blink Browsers */
+      }
+
+      &::-moz-selection {
+        background: $color;
+        color: white;
+        /* Gecko Browsers */
+      }
+    }
   }
 }
 </style>

@@ -12,56 +12,30 @@ $amour: #ee5253;
 $amour-invert: findColorInvert($amour);
 
 // Setup $colors to use as bulma classes (e.g. 'is-twitter')
-$colors: (
-  "white": (
-    $white,
-    $black
-  ),
-  "black": (
-    $black,
-    $white
-  ),
-  "light": (
-    $light,
-    $light-invert
-  ),
-  "dark": (
-    $dark,
-    $dark-invert
-  ),
-  "primary": (
-    $primary,
-    $primary-invert
-  ),
-  "info": (
-    $info,
-    $info-invert
-  ),
-  "success": (
-    $success,
-    $success-invert
-  ),
-  "warning": (
-    $warning,
-    $warning-invert
-  ),
-  "danger": (
-    $danger,
-    $danger-invert
-  ),
-  "twitter": (
-    $twitter,
-    $twitter-invert
-  ),
-  "pastel-red": (
-    $pastel-red,
-    $pastel-red-invert
-  ),
-  "amour": (
-    $amour,
-    $amour-invert
-  )
-);
+$colors: ("white": ($white,
+    $black),
+  "black": ($black,
+    $white),
+  "light": ($light,
+    $light-invert),
+  "dark": ($dark,
+    $dark-invert),
+  "primary": ($primary,
+    $primary-invert),
+  "info": ($info,
+    $info-invert),
+  "success": ($success,
+    $success-invert),
+  "warning": ($warning,
+    $warning-invert),
+  "danger": ($danger,
+    $danger-invert),
+  "twitter": ($twitter,
+    $twitter-invert),
+  "pastel-red": ($pastel-red,
+    $pastel-red-invert),
+  "amour": ($amour,
+    $amour-invert));
 
 // Links
 $link: $primary;
@@ -91,9 +65,11 @@ $end: 10;
   0% {
     opacity: 0;
   }
+
   25% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -101,6 +77,19 @@ $end: 10;
 
 .fade-in {
   animation: fadein 1.5s ease;
+}
+
+// Override selection color
+::selection {
+  background: #54A0FF;
+  color: white;
+  /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+  background: #54A0FF;
+  color: white;
+  /* Gecko Browsers */
 }
 
 // Import Bulma and Buefy styles
