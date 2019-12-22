@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Hero -->
-    <section class="hero">
+    <section class="hero is-medium">
       <div class="hero-body">
         <div class="container">
           <div class="columns is-centered">
@@ -28,26 +28,20 @@
       </div>
     </section>
 
-    <Divider />
+    <h1 class="has-text-centered has-text-grey-light title">...</h1>
 
     <!-- About -->
     <section class="section" id="about">
       <div class="container">
         <div class="columns is-centered">
           <div class="column is-3">
-            <div class="header-card has-background-danger has-text-right">
+            <div class="header-card has-text-right has-text-success">
               About
             </div>
           </div>
           <div class="column is-9">
-            <p class="description">
-              I aim to create solutions with
-              <span class="has-text-primary"
-                >technology
-                <span class="icon"><faIcon icon="laptop-code"/></span
-              ></span>
-              to
-              <underline :anim="true" color="red">improve</underline> everyday
+            <p class="description has-text-centered">
+              I create solutions with technology to improve everyday
               <span class="has-text-success"
                 >life <span class="icon"><faIcon icon="leaf"/></span
               ></span>
@@ -67,13 +61,13 @@
                 :delay="2"
               />
               <span class="icon is-large">
-                <faIcon icon="plus" class="fa-6x" />
+                <faIcon icon="plus" class="fa-4x" />
               </span>
-              <span class="icon is-large has-text-danger">
-                <faIcon icon="heart" class="fa-7x" />
+              <span class="icon is-large has-text-pastel-red">
+                <faIcon icon="heart" class="fa-5x" />
               </span>
               <span class="icon is-large">
-                <faIcon icon="equals" class="fa-6x" />
+                <faIcon icon="equals" class="fa-4x" />
               </span>
               <span class="icon is-large">
                 <img src="@/assets/icons/happy.svg" alt="" />
@@ -94,7 +88,7 @@
             </figure>
           </div>
           <div class="column is-3">
-            <div class="header-card has-background-info has-text-left">
+            <div class="header-card has-text-info has-text-left">
               Worked with
             </div>
           </div>
@@ -121,51 +115,57 @@ export default {
 <style lang="scss">
 @import "@/styles/theme.scss";
 body {
-  background-color: white;
+  background-color: $white;
   min-height: 100vh;
   height: 100%;
 }
 
 // Animations
 @keyframes floating {
+  $amplitude: 3%;
   0% {
-    transform: translateY(0%);
+    transform: translateY(-$amplitude);
   }
   50% {
-    transform: translateY(5%);
+    transform: translateY($amplitude);
   }
   100% {
-    transform: translateY(0%);
+    transform: translateY(-$amplitude);
   }
 }
 
-.initial {
-  font-size: 2.25em;
-  font-weight: 600 !important;
-  opacity: 1;
-}
-
+// Components
 .header-card {
   padding: 4rem 2rem;
 
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 600;
   font-family: "Josefin Sans", sans-serif;
 
-  color: white;
+  &.has-text-left {
+    border-left: 2px rgba($grey-light, 0.5) solid;
+  }
+  &.has-text-right {
+    border-right: 2px rgba($grey-light, 0.5) solid;
+  }
 }
 
-//Sections
+// Sections
 .hero {
-  // background-image: url("../assets/tglide_bg_plane.png");
-  // background-repeat: no-repeat;
-  // background-size: contain;
-  // background-position: center 5%;
-  // overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  font-family: "Montserrat", sans-serif;
 
+  .initial {
+    font-size: 2.25em;
+    font-weight: 600 !important;
+    opacity: 1;
+  }
   .image {
-    animation: floating 3.5s ease-in-out 0s infinite;
-    max-width: 50%;
+    animation: floating 3s ease-in-out 0s infinite;
+    max-width: 45%;
     margin: 0 2rem 0 auto;
 
     position: relative;
@@ -178,7 +178,7 @@ body {
     align-items: center;
 
     p {
-      font-size: 2.5rem;
+      font-size: 2rem;
       color: rgba(0, 0, 0, 0.8);
       font-weight: 400;
     }
@@ -187,7 +187,8 @@ body {
 
 #about {
   .description {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
     color: rgba(0, 0, 0, 0.8);
   }
 
@@ -195,6 +196,8 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
   }
 }
 

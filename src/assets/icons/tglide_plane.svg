@@ -14,7 +14,7 @@
    viewBox="0 0 105.15495 143.26077"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="tglide_plane.svg">
   <defs
      id="defs2" />
@@ -26,17 +26,17 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.5"
-     inkscape:cx="223.86394"
+     inkscape:cx="-231.13606"
      inkscape:cy="372.08132"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:object-nodes="false"
-     inkscape:window-width="1278"
-     inkscape:window-height="1048"
-     inkscape:window-x="1273"
+     inkscape:window-width="1366"
+     inkscape:window-height="712"
+     inkscape:window-x="0"
      inkscape:window-y="0"
-     inkscape:window-maximized="0" />
+     inkscape:window-maximized="1" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -60,7 +60,7 @@
        id="path4531"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:#f1f2f6;fill-opacity:1;stroke-width:0.3217679"
+       style="fill:#edeef3;fill-opacity:1;stroke-width:0.3217679"
        d="M 53.705765,140.38496 158.86069,88.651931 130.34276,184.63135 Z"
        id="rect4522"
        inkscape:connector-curvature="0"

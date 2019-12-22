@@ -6,28 +6,62 @@ $primary: #8c67ef;
 $primary-invert: findColorInvert($primary);
 $twitter: #4099ff;
 $twitter-invert: findColorInvert($twitter);
+$pastel-red: #ff6b6b;
+$pastel-red-invert: findColorInvert($pastel-red);
+$amour: #ee5253;
+$amour-invert: findColorInvert($amour);
 
 // Setup $colors to use as bulma classes (e.g. 'is-twitter')
-$colors: ("white": ($white,
-    $black),
-  "black": ($black,
-    $white),
-  "light": ($light,
-    $light-invert),
-  "dark": ($dark,
-    $dark-invert),
-  "primary": ($primary,
-    $primary-invert),
-  "info": ($info,
-    $info-invert),
-  "success": ($success,
-    $success-invert),
-  "warning": ($warning,
-    $warning-invert),
-  "danger": ($danger,
-    $danger-invert),
-  "twitter": ($twitter,
-    $twitter-invert));
+$colors: (
+  "white": (
+    $white,
+    $black
+  ),
+  "black": (
+    $black,
+    $white
+  ),
+  "light": (
+    $light,
+    $light-invert
+  ),
+  "dark": (
+    $dark,
+    $dark-invert
+  ),
+  "primary": (
+    $primary,
+    $primary-invert
+  ),
+  "info": (
+    $info,
+    $info-invert
+  ),
+  "success": (
+    $success,
+    $success-invert
+  ),
+  "warning": (
+    $warning,
+    $warning-invert
+  ),
+  "danger": (
+    $danger,
+    $danger-invert
+  ),
+  "twitter": (
+    $twitter,
+    $twitter-invert
+  ),
+  "pastel-red": (
+    $pastel-red,
+    $pastel-red-invert
+  ),
+  "amour": (
+    $amour,
+    $amour-invert
+  )
+);
 
 // Links
 $link: $primary;
@@ -38,10 +72,10 @@ $link-focus-border: $primary;
 $card-shadow: none;
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script|Josefin+Sans|Montserrat&display=swap");
 
 // Icons
-$icon-dimensions-large: 9rem;
+$icon-dimensions-large: 6rem;
 $start: 1;
 $end: 10;
 
@@ -51,7 +85,6 @@ $end: 10;
     height: #{$i}rem !important;
   }
 }
-
 
 // Import Bulma and Buefy styles
 @import "~bulma";

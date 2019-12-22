@@ -29,25 +29,37 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/styles/theme.scss";
-// Components
+
+$bg-height: 5%;
+@keyframes initialize {
+  0% {
+    background-size: 0% $bg-height;
+    background-position: left bottom;
+  }
+  25% {
+    background-size: 0% $bg-height;
+    background-position: left bottom;
+  }
+  100% {
+    background-size: 100% $bg-height;
+    background-position: left bottom;
+  }
+}
+
 .underline {
-  // text-decoration-line: underline;
-  // text-decoration-style: solid;
-  // text-decoration-color: black;
+  animation: initialize 1s ease 1;
+  padding: 0 0.1em;
 
-  // font-size: 1.05em;
-  // font-weight: 600 !important;
-
-  background-size: 100% 10%;
+  background-size: 100% $bg-height;
   background-position: center bottom;
   background-repeat: no-repeat;
 
   &.anim {
     // Animation
-    transition: 0.175s ease;
+    transition: 0.25s ease;
     &:hover,
     &.active {
-      background-size: 100% 80%;
+      background-size: 100% 90%;
       cursor: pointer;
     }
     &.active {

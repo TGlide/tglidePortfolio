@@ -44,20 +44,21 @@ export default {
 </script>
 
 <style lang="scss">
-$img-sz: 175px;
+$img-sz: 5.25em;
+$img-cont: 6em;
 // Animations
 @keyframes goAway {
   0% {
     transform: translateY(0%);
   }
   100% {
-    transform: translateY(-$img-sz);
+    transform: translateY(-$img-cont);
   }
 }
 
 @keyframes come {
   0% {
-    transform: translateY($img-sz + 10px);
+    transform: translateY($img-cont + 0.1em);
   }
   100% {
     transform: translateY(0%);
@@ -70,8 +71,8 @@ $img-sz: 175px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: $img-sz;
-    height: $img-sz;
+    width: $img-cont;
+    height: $img-cont;
   }
   img {
     margin: auto auto;
