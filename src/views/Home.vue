@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="fade-in" v-if="loaded">
     <!-- Hero -->
     <section class="hero is-medium">
       <div class="hero-body">
@@ -108,7 +108,15 @@ import underline from "@/components/Underline";
 
 export default {
   name: "home",
-  components: { Divider, TechCarousel, underline }
+  components: { Divider, TechCarousel, underline },
+  data() {
+    return {
+      loaded: false
+    };
+  },
+  mounted() {
+    this.loaded = true;
+  }
 };
 </script>
 

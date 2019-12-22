@@ -47,7 +47,7 @@ $bg-height: 5%;
 }
 
 .underline {
-  animation: initialize 1s ease 1;
+  animation: initialize 1.5s ease 1;
   padding: 0 0.1em;
 
   background-size: 100% $bg-height;
