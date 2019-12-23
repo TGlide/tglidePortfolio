@@ -114,12 +114,16 @@
               <div class="column is-one-third">
                 <div class="item">
                   <span>
-                    <img src="@/assets/icons/desktop.svg" />
+                    <interIcon :icon="require('@/assets/icons/desktop.svg')" />
                   </span>
                   <span>Sites</span>
                 </div>
                 <div class="item">
-                  <span><img src="@/assets/icons/mobile-alt.svg"/></span>
+                  <span
+                    ><interIcon
+                      :icon="require('@/assets/icons/mobile-alt.svg')"
+                    />
+                  </span>
                   <span>Apps</span>
                 </div>
               </div>
@@ -127,22 +131,32 @@
               <div class="column is-one-third">
                 <div class="item">
                   <span>
-                    <img src="@/assets/icons/hat-wizard.svg" />
+                    <interIcon
+                      :icon="require('@/assets/icons/hat-wizard.svg')"
+                    />
                   </span>
                   <span>Mágica</span>
                 </div>
                 <div class="item">
-                  <span><img src="@/assets/icons/cogs.svg"/></span>
+                  <interIcon :icon="require('@/assets/icons/cogs.svg')" />
                   <span>Automação</span>
                 </div>
               </div>
               <div class="column is-one-third">
                 <div class="item">
-                  <span><img src="@/assets/icons/laptop-code.svg"/></span>
+                  <span
+                    ><interIcon
+                      :icon="require('@/assets/icons/laptop-code.svg')"
+                    />
+                  </span>
                   <span>Programas</span>
                 </div>
                 <div class="item">
-                  <span><img src="@/assets/icons/ice-cream.svg"/></span>
+                  <span
+                    ><interIcon
+                      :icon="require('@/assets/icons/ice-cream.svg')"
+                    />
+                  </span>
                   <span>Comer doce</span>
                 </div>
               </div>
@@ -187,10 +201,11 @@
 import Divider from "@/components/Divider";
 import TechCarousel from "@/components/TechCarousel";
 import underline from "@/components/Underline";
+import interIcon from "@/components/InteractiveIcon";
 
 export default {
   name: "home",
-  components: { Divider, TechCarousel, underline },
+  components: { Divider, TechCarousel, underline, interIcon },
   data() {
     return {
       loaded: false,
@@ -328,7 +343,6 @@ body {
           display: flex;
           justify-content: center;
           align-items: center;
-          cursor: pointer;
         }
         :nth-child(2) {
           font-size: 1.5rem;
