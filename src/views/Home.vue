@@ -113,33 +113,37 @@
             <div class="columns is-centered items">
               <div class="column is-one-third">
                 <div class="item">
-                  <span><faIcon icon="desktop"/></span>
+                  <span>
+                    <img src="@/assets/icons/desktop.svg" />
+                  </span>
                   <span>Sites</span>
                 </div>
                 <div class="item">
-                  <span><faIcon icon="mobile-alt"/></span>
+                  <span><img src="@/assets/icons/mobile-alt.svg"/></span>
                   <span>Apps</span>
                 </div>
               </div>
 
               <div class="column is-one-third">
                 <div class="item">
-                  <span><faIcon icon="magic"/></span>
+                  <span>
+                    <img src="@/assets/icons/hat-wizard.svg" />
+                  </span>
                   <span>Mágica</span>
                 </div>
                 <div class="item">
-                  <span><faIcon icon="cog"/></span>
+                  <span><img src="@/assets/icons/cogs.svg"/></span>
                   <span>Automação</span>
                 </div>
               </div>
               <div class="column is-one-third">
                 <div class="item">
-                  <span><faIcon icon="laptop-code"/></span>
+                  <span><img src="@/assets/icons/laptop-code.svg"/></span>
                   <span>Programas</span>
                 </div>
                 <div class="item">
-                  <span><faIcon icon="ice-cream"/></span>
-                  <span>Como doce</span>
+                  <span><img src="@/assets/icons/ice-cream.svg"/></span>
+                  <span>Comer doce</span>
                 </div>
               </div>
             </div>
@@ -242,35 +246,40 @@ body {
 
 // Sections
 .hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 90vh;
-  font-family: "Montserrat", sans-serif;
+  .hero-body {
+    padding-top: 0;
+    padding-bottom: 0;
 
-  .initial {
-    font-size: 2.25em;
-    font-weight: 600 !important;
-    opacity: 1;
-  }
-  .image {
-    animation: floating 3s ease-in-out 0s infinite;
-    max-width: 45%;
-    margin: 0 2rem 0 auto;
-
-    position: relative;
-    top: 3rem;
-  }
-
-  .profile-desc {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     align-items: center;
+    min-height: 90vh;
+    font-family: "Montserrat", sans-serif;
 
-    p {
-      font-size: 2rem;
-      color: rgba(0, 0, 0, 0.8);
-      font-weight: 400;
+    .initial {
+      font-size: 2.25em;
+      font-weight: 600 !important;
+      opacity: 1;
+    }
+    .image {
+      animation: floating 3s ease-in-out 0s infinite;
+      max-width: 45%;
+      margin: 0 2rem 0 auto;
+
+      position: relative;
+      top: 3rem;
+    }
+
+    .profile-desc {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      p {
+        font-size: 2rem;
+        color: rgba(0, 0, 0, 0.8);
+        font-weight: 400;
+      }
     }
   }
 }
@@ -313,11 +322,13 @@ body {
         align-items: center;
 
         :nth-child(1) {
-          width: 2.65rem;
-          height: 2.65rem;
+          $icon-size: 3rem;
+          width: $icon-size;
+          height: $icon-size;
           display: flex;
           justify-content: center;
           align-items: center;
+          cursor: pointer;
         }
         :nth-child(2) {
           font-size: 1.5rem;
